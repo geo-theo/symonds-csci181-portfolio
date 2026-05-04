@@ -26,120 +26,231 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html" aria-current="page">Resume</a></li>
           <li><a href="project.html">Projects</a></li>
-          <li><a href="bento-grid.html">Bento-Grid</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
-      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
+      <button id="theme-toggle" type="button">Theme</button>
     </header>
 
     <main id="main-content">
+      <section id="hero">
+        <p class="display-text">
+          Cartography | Coding | Geographic Information Systems
+        </p>
+      </section>
+
       <section class="page-section resume">
         <h1>Resume</h1>
-        <!---------- Education ---------->
-        <section>
-          <h2>Education</h2>
-          <h3>
-            <strong>Bachelor's in Geography & Computer Science</strong>,
-            University of Montana
-          </h3>
-          <p>May 2025 - Present</p>
-          <p><strong>GPA:</strong> 4.0</p>
-        </section>
-        <!---------- Work Experience ---------->
-        <section>
-          <h2>Experience</h2>
-          <h3>
-            <strong>Data Analyst</strong> - USAID Global Health Supply Chain
-            Project
-          </h3>
-          <p>Jul 2020 - Feb 2025</p>
-          <p>Washington, DC, USA</p>
-          <ul>
-            <li>Collect HIV supply chain data from warehouses.</li>
-            <li>Clean and process data.</li>
-            <li>Present data in visualizations and reports.</li>
-          </ul>
-        </section>
-        <!---------- Skills ---------->
-        <section>
-          <h2>Skills</h2>
-          <ul>
-            <li>Data Collection</li>
-            <li>Excel</li>
-            <li>PowerBI</li>
-          </ul>
-        </section>
-      </section>
-      <section>
-        <h2>Courses</h2>
 
-        <table class="courses-table">
-          <thead>
-            <tr>
-              <th scope="col">Code</th>
-              <th scope="col">Name</th>
-            </tr>
-          </thead>
+        <div class="resume-accordion">
+          <details class="accordion-panel">
+            <summary>Education</summary>
+            <div class="accordion-body">
+              <h2>
+                <strong>Bachelor's in Geography & Computer Science</strong>,
+                University of Montana
+              </h2>
+              <p>May 2025 - Present</p>
+              <p><strong>GPA:</strong> 4.0</p>
+            </div>
+          </details>
 
-          <tbody>
-            <tr>
-              <th scope="row">CSCI 150</th>
-              <td>Introduction to Computer Science</td>
-            </tr>
+          <details class="accordion-panel">
+            <summary>Experience</summary>
+            <div class="accordion-body">
+              <h2>
+                <strong>Data Analyst</strong> - USAID Global Health Supply
+                Chain Project
+              </h2>
+              <p>Jul 2020 - Feb 2025</p>
+              <p>Washington, DC, USA</p>
+              <ul>
+                <li>Collect HIV supply chain data from warehouses.</li>
+                <li>Clean and process data.</li>
+                <li>Present data in visualizations and reports.</li>
+              </ul>
+            </div>
+          </details>
 
-            <tr>
-              <th scope="row">CSCI 151</th>
-              <td>Interdisciplinary Computer Science I</td>
-            </tr>
+          <details class="accordion-panel">
+            <summary>Skills</summary>
+            <div class="accordion-body">
+              <ul class="skills-list">
+                <li>
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Python</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Java</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>JavaScript</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>HTML</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>CSS</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo skill-logo-monochrome"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/arcgis.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>ArcGIS</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo skill-logo-monochrome"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/qgis.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>QGIS</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo skill-logo-monochrome"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/powerbi.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Power BI</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo skill-logo-monochrome"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tableau.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Tableau</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo skill-logo-monochrome"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftexcel.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Excel</span>
+                </li>
+                <li>
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>R</span>
+                </li>
+              </ul>
+            </div>
+          </details>
 
-            <tr>
-              <th scope="row">CSCI 152</th>
-              <td>Interdisciplinary Computer Science II</td>
-            </tr>
+          <details class="accordion-panel">
+            <summary>Courses</summary>
+            <div class="accordion-body table-scroll">
+              <table class="courses-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">Name</th>
+                  </tr>
+                </thead>
 
-            <tr>
-              <th scope="row">CSCI 181</th>
-              <td>Web Design and Programming</td>
-            </tr>
+                <tbody>
+                  <tr>
+                    <th scope="row">CSCI 150</th>
+                    <td>Introduction to Computer Science</td>
+                  </tr>
 
-            <tr>
-              <th scope="row">GPHY 284</th>
-              <td>Introduction to Geographic Information Systems (GIS)</td>
-            </tr>
+                  <tr>
+                    <th scope="row">CSCI 151</th>
+                    <td>Interdisciplinary Computer Science I</td>
+                  </tr>
 
-            <tr>
-              <th scope="row">GPHY 488</th>
-              <td>Applications of GIS</td>
-            </tr>
+                  <tr>
+                    <th scope="row">CSCI 152</th>
+                    <td>Interdisciplinary Computer Science II</td>
+                  </tr>
 
-            <tr>
-              <th scope="row">GPHY 489</th>
-              <td>Remote Sensing & Raster GIS</td>
-            </tr>
+                  <tr>
+                    <th scope="row">CSCI 181</th>
+                    <td>Web Design and Programming</td>
+                  </tr>
 
-            <tr>
-              <th scope="row">GPHY 491</th>
-              <td>Programming for GIS</td>
-            </tr>
+                  <tr>
+                    <th scope="row">GPHY 284</th>
+                    <td>Introduction to Geographic Information Systems (GIS)</td>
+                  </tr>
 
-            <tr>
-              <th scope="row">CSCI 491</th>
-              <td>Geospatial Data Science</td>
-            </tr>
+                  <tr>
+                    <th scope="row">GPHY 488</th>
+                    <td>Applications of GIS</td>
+                  </tr>
 
-            <tr>
-              <th scope="row">FORS 491</th>
-              <td>Geospatial Analysis for Natural Resources</td>
-            </tr>
+                  <tr>
+                    <th scope="row">GPHY 489</th>
+                    <td>Remote Sensing & Raster GIS</td>
+                  </tr>
 
-            <tr>
-              <th scope="row">GEO 494</th>
-              <td>UAV, Surveying, and 3D Mapping</td>
-            </tr>
-          </tbody>
-        </table>
+                  <tr>
+                    <th scope="row">GPHY 491</th>
+                    <td>Programming for GIS</td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">CSCI 491</th>
+                    <td>Geospatial Data Science</td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">FORS 491</th>
+                    <td>Geospatial Analysis for Natural Resources</td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">GEO 494</th>
+                    <td>UAV, Surveying, and 3D Mapping</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
       </section>
     </main>
   </body>

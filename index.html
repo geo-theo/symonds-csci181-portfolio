@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="./scripts/theme.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Home - Theo Symonds Portfolio</title>
   </head>
 
@@ -28,136 +27,293 @@
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="project.html">Projects</a></li>
-          <li><a href="bento-grid.html">Bento-Grid</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
-      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
+      <button id="theme-toggle" type="button">Theme</button>
     </header>
 
     <main id="main-content">
-      <section id="hero">
-        <p class="display-text">
+      <section id="hero" class="home-hero" aria-labelledby="hero-title">
+        <p class="eyebrow">
           Cartography | Coding | Geographic Information Systems
         </p>
-        <button>View my work</button>
-      </section>
-      <h1>Home</h1>
-
-      <section class="px-6 py-16 bg-[#3d424c]">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">
-            Testimonials
-          </h2>
-          <ul
-            class="list-none grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 p-0 m-0 max-w-5xl mx-auto"
-          >
-            <li>
-              <figure
-                class="relative bg-white rounded-2xl shadow-md p-8 h-full"
-              >
-                <svg
-                  viewBox="0 0 32 32"
-                  aria-hidden="true"
-                  focusable="false"
-                  class="absolute top-4 left-4 w-8 h-8 fill-gray-200"
-                >
-                  <path d="M10 8v8H6v6h6V8h-2zm12 0v8h-4v6h6V8h-2z"></path>
-                </svg>
-                <blockquote class="mb-6">
-                  <p class="text-gray-600 italic leading-relaxed pt-4">
-                    I highly recommend working with Theo, he will go above and
-                    beyond to deliver the best quality work. Everyone at Super
-                    Secret Company A found that Theo is dependable,
-                    hard-working, and trustworthy. You can trust him with your
-                    company secrets.
-                  </p>
-                </blockquote>
-                <figcaption class="flex items-center gap-4">
-                  <img
-                    src="./images/testimonial1.png"
-                    alt="Portrait of first testimonier"
-                    class="w-14 h-14 rounded-full object-cover"
-                  />
-                  <div>
-                    <p class="text-gray-900 font-medium">Stevill Jobgates</p>
-                    <p class="text-sm text-gray-500">
-                      CEO, Super Secret Company A
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-            <li>
-              <figure
-                class="relative bg-white rounded-2xl shadow-md p-8 h-full"
-              >
-                <svg
-                  viewBox="0 0 32 32"
-                  aria-hidden="true"
-                  focusable="false"
-                  class="absolute top-4 left-4 w-8 h-8 fill-gray-200"
-                >
-                  <path d="M10 8v8H6v6h6V8h-2zm12 0v8h-4v6h6V8h-2z"></path>
-                </svg>
-                <blockquote class="mb-6">
-                  <p class="text-gray-600 italic leading-relaxed pt-4">
-                    Theo was so bad at his job at Even Secreter Company B, that
-                    we had to resort to permanently suspending the company's
-                    entire internship program. Do not trust him with your
-                    company secrets.
-                  </p>
-                </blockquote>
-                <figcaption class="flex items-center gap-4">
-                  <img
-                    src="./images/testimonial2.png"
-                    alt="Portrait of second testimonier"
-                    class="w-14 h-14 rounded-full object-cover"
-                  />
-                  <div>
-                    <p class="text-gray-900 font-medium">Jenselon Huangmusk</p>
-                    <p class="text-sm text-gray-500">
-                      Chief Legal Officer, Even Secreter Company B
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-            <li>
-              <figure
-                class="relative bg-white rounded-2xl shadow-md p-8 h-full"
-              >
-                <svg
-                  viewBox="0 0 32 32"
-                  aria-hidden="true"
-                  focusable="false"
-                  class="absolute top-4 left-4 w-8 h-8 fill-gray-200"
-                >
-                  <path d="M10 8v8H6v6h6V8h-2zm12 0v8h-4v6h6V8h-2z"></path>
-                </svg>
-                <blockquote class="mb-6">
-                  <p class="text-gray-600 italic leading-relaxed pt-4">Who?</p>
-                </blockquote>
-                <figcaption class="flex items-center gap-4">
-                  <img
-                    src="./images/testimonial3.png"
-                    alt="Portrait of third testimonier"
-                    class="w-14 h-14 rounded-full object-cover"
-                  />
-                  <div>
-                    <p class="text-gray-900 font-medium">
-                      Diarbara Hendricorcoran
-                    </p>
-                    <p class="text-sm text-gray-500">Shark, Shark Tank</p>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
+        <h1 id="hero-title">Theo Symonds</h1>
+        <p class="hero-summary">Passionate about Maps & Data</p>
+        <div class="hero-actions">
+          <a class="button" href="#featured-projects">View Featured Projects</a>
+          <a class="button button-secondary" href="resume.html">View Resume</a>
         </div>
       </section>
 
+      <section class="about-quote-section" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <div class="about-layout">
+          <img
+            class="about-graphic about-graphic-left"
+            src="images/about_graphic1.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <blockquote>
+            <p>
+              I am a geography and computer science student interested in the
+              intersection of data, geography, and international development. My
+              work focuses on using cartography and statistical analysis to help
+              people understand patterns and make better spatial decisions.
+            </p>
+          </blockquote>
+          <img
+            class="about-graphic about-graphic-right"
+            src="images/about_graphic2.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </section>
+
+      <section
+        class="home-section"
+        id="featured-projects"
+        aria-labelledby="featured-projects-heading"
+      >
+        <h2 id="featured-projects-heading">Featured Projects</h2>
+        <div class="featured-projects-grid">
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="images/project1.png"
+              alt="Synthetic aperture radar ship detection project preview"
+            />
+            <h3>SAR Ship Detection</h3>
+            <p>
+              A geospatial machine learning project that identifies ships in
+              synthetic aperture radar imagery.
+            </p>
+            <a
+              class="button"
+              href="project.html"
+              aria-label="View the SAR Ship Detection project"
+            >
+              View Project
+            </a>
+          </article>
+
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="images/project2.png"
+              alt="Kerala snakebite hospital accessibility project preview"
+            />
+            <h3>Kerala Snakebite Accessibility</h3>
+            <p>
+              A GIS accessibility analysis focused on travel time, health
+              access, and public health planning.
+            </p>
+            <a
+              class="button"
+              href="project.html"
+              aria-label="View the Kerala Snakebite Accessibility project"
+            >
+              View Project
+            </a>
+          </article>
+
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="images/project3.png"
+              alt="Paris transit access analysis project preview"
+            />
+            <h3>Paris Transit Desert Analysis</h3>
+            <p>
+              A transit mapping project that uses geographic data to find areas
+              with weaker access to public transportation.
+            </p>
+            <a
+              class="button"
+              href="project.html"
+              aria-label="View the Paris Transit Desert Analysis project"
+            >
+              View Project
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-section" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <ul class="skills-list">
+          <li>
+            <img
+              class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Python</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Java</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>JavaScript</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>HTML</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>CSS</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo skill-logo-monochrome"
+              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/arcgis.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>ArcGIS</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo skill-logo-monochrome"
+              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/qgis.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>QGIS</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo skill-logo-monochrome"
+              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/powerbi.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Power BI</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo skill-logo-monochrome"
+              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tableau.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Tableau</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo skill-logo-monochrome"
+              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftexcel.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Excel</span>
+          </li>
+          <li>
+            <img
+              class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>R</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="bento" aria-labelledby="gallery-heading">
+        <div class="bento-grid">
+          <div class="bento-item left-vert">
+            <img
+              src="images/portfolio_bento_1.png"
+              alt="Portfolio collage image with a vertical map design"
+            />
+          </div>
+
+          <div class="bento-item sq1">
+            <img
+              src="images/portfolio_bento_3.png"
+              alt="Portfolio collage image with cartography design elements"
+            />
+          </div>
+
+          <div class="bento-item sq2">
+            <img
+              src="images/portfolio_bento_6.png"
+              alt="Portfolio collage image with geographic design work"
+            />
+          </div>
+
+          <div class="bento-item horiz">
+            <img
+              src="images/portfolio_bento_5.png"
+              alt="Wide portfolio collage image with mapping visuals"
+            />
+          </div>
+
+          <div class="bento-item right-vert">
+            <img
+              src="images/portfolio_bento_7.png"
+              alt="Tall portfolio collage image with design and map details"
+            />
+          </div>
+
+          <div class="bento-item big-sq">
+            <img
+              src="images/portfolio_bento_2.png"
+              alt="Large portfolio collage image with geographic artwork"
+            />
+          </div>
+
+          <div class="bento-item rect-a">
+            <img
+              src="images/portfolio_bento_8.png"
+              alt="Portfolio collage rectangle with web and map visuals"
+            />
+          </div>
+
+          <div class="bento-item rect-b">
+            <img
+              src="images/portfolio_bento_4.png"
+              alt="Portfolio collage rectangle with cartographic details"
+            />
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <address>
+        <a href="mailto:email@example.com">email@example.com</a>
+        <a href="https://github.com/geo-theo">GitHub: geo-theo</a>
+        <a href="contact.html">Contact page</a>
+      </address>
+    </footer>
   </body>
 </html>
