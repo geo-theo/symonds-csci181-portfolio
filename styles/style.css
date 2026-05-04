@@ -1,0 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --page-bg: #fff8e7;
+  --text: #123524;
+  --heading: #123524;
+  --link: #0f4a38;
+  --button-bg: #123524;
+  --button-text: #fff8e7;
+  --header-bg: #fff8e7;
+  --header-border: #d8cdb5;
+  --nav-hover-bg: #f2ead7;
+  --nav-current-bg: #123524;
+  --nav-current-text: #fff8e7;
+  --section-border: #d8cdb5;
+  --section-bg: #fffaf0;
+  --form-label: #123524;
+  --input-bg: #fffaf0;
+  --input-text: #123524;
+  --input-border: #d8cdb5;
+  --table-bg: #fffaf0;
+  --table-text: #123524;
+  --table-border: #d8cdb5;
+  --table-head-bg: #f2ead7;
+  --table-head-text: #123524;
+  --project-card-bg: #fffaf0;
+  --project-card-border: #d8cdb5;
+  --project-card-text: #123524;
+  --modal-backdrop: rgba(18, 53, 36, 0.72);
+}
+
+body.dark {
+  --page-bg: #123524;
+  --text: #fff8e7;
+  --heading: #fff8e7;
+  --link: #fff8e7;
+  --button-bg: #fff8e7;
+  --button-text: #123524;
+  --header-bg: #123524;
+  --header-border: #2f5d48;
+  --nav-hover-bg: #1c4a35;
+  --nav-current-bg: #fff8e7;
+  --nav-current-text: #123524;
+  --section-border: #2f5d48;
+  --section-bg: #0f2d20;
+  --form-label: #fff8e7;
+  --input-bg: #fff8e7;
+  --input-text: #123524;
+  --input-border: #d8cdb5;
+  --table-bg: #0f2d20;
+  --table-text: #fff8e7;
+  --table-border: #2f5d48;
+  --table-head-bg: #0a2419;
+  --table-head-text: #fff8e7;
+  --project-card-bg: #0f2d20;
+  --project-card-border: #2f5d48;
+  --project-card-text: #fff8e7;
+  --modal-backdrop: rgba(6, 22, 15, 0.82);
+}
+
+html {
+  font-size: 16px; /* sets the root font size */
+  box-sizing: border-box; /* Sets global default for box model */
+  background-color: var(--page-bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Tells everything to inherit border-box by default */
+}
+
+* {
+  margin: 0; /* remove default margin */
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--text);
+  font-size: 1rem; /* 1rem equals 16px */
+  line-height: 1.5rem;
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /* Improve text rendering */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* form controls inherit fonts */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; /* Avoid text overflows */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+  font-family: Poppins, "Work Sans", Helvetica, Arial, sans-serif;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 2.36875rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.77688rem;
+  font-weight: 500;
+  line-height: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.33313rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--link);
+  font-weight: 500;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 500;
+}
+
+.display-text {
+  font-family: "Bebas Neue", "Work Sans", Helvetica, Arial, sans-serif;
+  font-size: 3.1575rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+}
+
+section.page-section {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--section-border);
+  background-color: var(--section-bg);
+  margin: 1 auto 1rem auto;
+  width: 50%;
+  max-width: 1080px;
+}
+
+#page-header {
+  padding: 1rem 1.5rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+}
+
+#page-header .logo {
+  color: var(--heading);
+  font-family: Poppins, "Work Sans", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  font-size: 1.3333rem;
+}
+
+#hero {
+  background-image: url("../images/header_hero.jpg");
+  background-size: cover;
+  background-position: center;
+
+  height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff8e7;
+
+  margin-bottom: 3rem;
+}
+
+#page-header img {
+  height: 50px;
+  width: auto;
+}
+
+#page-header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#page-header nav li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+#page-header nav a {
+  text-decoration: none;
+  color: var(--link);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+#page-header nav a:hover {
+  background-color: var(--nav-hover-bg);
+}
+
+#page-header {
+  padding: 1rem 1.5rem;
+}
+
+/* Resume page spacing */
+.resume h1 {
+  margin-bottom: 1.5rem;
+}
+.resume h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.resume h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resume p {
+  margin-bottom: 0.5rem;
+}
+
+.resume ul {
+  margin-top: 0.5rem;
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.resume li {
+  margin-bottom: 0.25rem;
+}
+
+.resume > section {
+  margin-bottom: 2rem;
+}
+
+.resume {
+  color: var(--text);
+}
+
+/* =========================
+   CONTACT FORM (fix labels + alignment)
+   ========================= */
+
+.contact-form {
+  max-width: 600px;
+}
+
+.contact-form div {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  color: var(--form-label);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--input-border);
+  border-radius: 0.75rem;
+  background: var(--input-bg);
+  color: var(--input-text);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 0.5rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--link);
+}
+
+/* Courses table */
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+
+  background-color: var(--table-bg);
+  color: var(--table-text);
+}
+
+.courses-table th,
+.courses-table td {
+  border: 1px solid var(--table-border);
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+/* Header row */
+.courses-table thead th {
+  background-color: var(--table-head-bg);
+  color: var(--table-head-text);
+  text-align: left;
+}
+
+/* Row headers (course names) */
+.courses-table tbody th {
+  font-weight: 600;
+  color: var(--table-text);
+}
+
+/* Projects section */
+.projects-section {
+  width: min(100% - 2rem, 1080px);
+  margin: 0 auto 3rem;
+}
+
+.projects-section h1 {
+  margin-bottom: 1.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  background-color: var(--project-card-bg);
+  border: 1px solid var(--project-card-border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.project-card h2,
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  margin-bottom: 0.75rem;
+  color: var(--project-card-text);
+}
+
+.project-modal-button {
+  width: 100%;
+  margin-top: 0.75rem;
+  cursor: pointer;
+}
+
+.project-link {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.project-link:hover {
+  text-decoration: none;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 0.75rem 0;
+  display: block;
+}
+
+.project-modal {
+  width: min(100% - 2rem, 720px);
+  max-height: 90vh;
+  padding: 0;
+  border: none;
+  border-radius: 1rem;
+  background: transparent;
+  color: var(--text);
+}
+
+.project-modal::backdrop {
+  background: var(--modal-backdrop);
+}
+
+.modal-card {
+  position: relative;
+  max-height: 90vh;
+  overflow: auto;
+  padding: 1.5rem;
+  background-color: var(--project-card-bg);
+  border: 1px solid var(--project-card-border);
+  border-radius: 1rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.modal-card h2 {
+  padding-right: 3rem;
+}
+
+.modal-card p,
+.modal-card li {
+  color: var(--project-card-text);
+}
+
+.modal-card ul {
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+}
+
+.modal-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   BENTO GRID
+   ========================= */
+
+/* BENTO GRID (desktop layout) */
+.bento-grid {
+  display: grid;
+  gap: 18px;
+
+  /* 4 columns gives you the "quarter" concept cleanly */
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 140px;
+
+  /* Named layout */
+  grid-template-areas:
+    "left  sq1   sq2   right"
+    "left  horiz horiz right"
+    "left  bigsq recta right"
+    "left  bigsq rectb right";
+}
+
+/* Each tile clips the image */
+.bento-item {
+  overflow: hidden;
+  border-radius: 18px; /* optional */
+}
+
+/* The key: images fill tiles with no white space */
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Map items to grid areas */
+.left-vert {
+  grid-area: left;
+}
+.sq1 {
+  grid-area: sq1;
+}
+.sq2 {
+  grid-area: sq2;
+}
+.horiz {
+  grid-area: horiz;
+}
+.right-vert {
+  grid-area: right;
+}
+
+.big-sq {
+  grid-area: bigsq;
+}
+.rect-a {
+  grid-area: recta;
+}
+.rect-b {
+  grid-area: rectb;
+}
+
+/* Responsive: collapse to a simple, good-looking flow */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+    grid-template-areas: none;
+  }
+
+  /* Let items auto-flow, but keep some visual hierarchy */
+  .left-vert,
+  .right-vert,
+  .horiz {
+    grid-column: span 2;
+  }
+
+  .big-sq {
+    grid-column: span 2;
+    grid-auto-rows: 220px;
+  }
+}
+
+@media (max-width: 520px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 180px;
+  }
+
+  .left-vert,
+  .right-vert,
+  .horiz,
+  .big-sq {
+    grid-column: span 1;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  visibility: hidden;
+}
+
+.skip-link:focus {
+  visibility: visible;
+}
+
+/* Aria Label */
+#page-header nav a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+  background-color: var(--nav-current-bg);
+  color: var(--nav-current-text);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

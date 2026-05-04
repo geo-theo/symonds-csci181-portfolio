@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./scripts/theme.js" defer></script>
+    <script src="./scripts/project.js" defer></script>
+    <title>Projects - Theo Symonds Portfolio</title>
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="page-header">
+      <a href="index.html" class="logo">
+        <img
+          src="images/html_logo_TS.svg"
+          width="50"
+          height="50"
+          alt="Logo image with initials TS"
+        />
+        <span>Theo Symonds</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="project.html" aria-current="page">Projects</a></li>
+          <li><a href="bento-grid.html">Bento-Grid</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
+    </header>
+
+    <main id="main-content" class="projects-page">
+      <section id="hero">
+        <p class="display-text">
+          Cartography | Coding | Geographic Information Systems
+        </p>
+        <button type="button">View my work</button>
+      </section>
+
+      <section class="projects-section" aria-labelledby="projects-heading">
+        <h1 id="projects-heading">Projects</h1>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="images/project1.png"
+              alt="Synthetic aperture radar ship detection project preview"
+            />
+            <h2>SAR Ship Detection (YOLO)</h2>
+            <button
+              type="button"
+              class="project-modal-button"
+              data-modal-target="sar-modal"
+            >
+              View Project
+            </button>
+          </article>
+
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="images/project2.png"
+              alt="Kerala snakebite hospital accessibility project preview"
+            />
+            <h2>Kerala Snakebite Accessibility</h2>
+            <button
+              type="button"
+              class="project-modal-button"
+              data-modal-target="kerala-modal"
+            >
+              View Case Study
+            </button>
+          </article>
+
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="images/project3.png"
+              alt="Paris transit access analysis project preview"
+            />
+            <h2>Paris Transit Desert Analysis</h2>
+            <button
+              type="button"
+              class="project-modal-button"
+              data-modal-target="paris-modal"
+            >
+              View Project
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <dialog
+        class="project-modal"
+        id="sar-modal"
+        aria-labelledby="sar-modal-title"
+      >
+        <div class="modal-card">
+          <button
+            type="button"
+            class="modal-close"
+            aria-label="Close project details"
+            data-modal-close
+          >
+            &times;
+          </button>
+          <img
+            class="modal-img"
+            src="images/project1.png"
+            alt="Synthetic aperture radar ship detection project preview"
+          />
+          <h2 id="sar-modal-title">SAR Ship Detection (YOLO)</h2>
+          <p>
+            Trained an object detection model to identify ships in Synthetic
+            Aperture Radar imagery. The workflow includes image preprocessing,
+            labeling, model training, and evaluation steps.
+          </p>
+          <ul>
+            <li>Prepared SAR imagery for object detection workflows.</li>
+            <li>Labeled ship features for supervised model training.</li>
+            <li>Evaluated model outputs against detection performance goals.</li>
+          </ul>
+        </div>
+      </dialog>
+
+      <dialog
+        class="project-modal"
+        id="kerala-modal"
+        aria-labelledby="kerala-modal-title"
+      >
+        <div class="modal-card">
+          <button
+            type="button"
+            class="modal-close"
+            aria-label="Close project details"
+            data-modal-close
+          >
+            &times;
+          </button>
+          <img
+            class="modal-img"
+            src="images/project2.png"
+            alt="Kerala snakebite hospital accessibility project preview"
+          />
+          <h2 id="kerala-modal-title">Kerala Snakebite Accessibility</h2>
+          <p>
+            Built an accessibility analysis to estimate travel time to hospitals
+            and highlight higher-risk areas. The project combines land cover,
+            roads, population, and healthcare access factors.
+          </p>
+          <ul>
+            <li>Modeled travel time to hospital access points.</li>
+            <li>Combined geographic risk factors into a spatial workflow.</li>
+            <li>Mapped underserved areas for clearer public health planning.</li>
+          </ul>
+        </div>
+      </dialog>
+
+      <dialog
+        class="project-modal"
+        id="paris-modal"
+        aria-labelledby="paris-modal-title"
+      >
+        <div class="modal-card">
+          <button
+            type="button"
+            class="modal-close"
+            aria-label="Close project details"
+            data-modal-close
+          >
+            &times;
+          </button>
+          <img
+            class="modal-img"
+            src="images/project3.png"
+            alt="Paris transit access analysis project preview"
+          />
+          <h2 id="paris-modal-title">Paris Transit Desert Analysis</h2>
+          <p>
+            Mapped public transit access using GTFS data and isochrones to
+            identify underserved neighborhoods. The project focuses on clear
+            cartography and reproducible geospatial analysis.
+          </p>
+          <ul>
+            <li>Processed GTFS transit data for accessibility analysis.</li>
+            <li>Created isochrone-based maps of reachable transit service.</li>
+            <li>Identified neighborhoods with weaker transit coverage.</li>
+          </ul>
+        </div>
+      </dialog>
+    </main>
+  </body>
+</html>
